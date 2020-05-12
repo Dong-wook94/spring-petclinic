@@ -1,3 +1,9 @@
+# 동욱 스프링 스터디 인강 
+![image](https://user-images.githubusercontent.com/36303777/81691551-f800dc80-9497-11ea-96a2-8eb248a3d4f7.png)
+
+위에 해당하는 변경사항 적용.
+
+-----------
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
 Deploy this sample application to Pivotal Web Services:
 
