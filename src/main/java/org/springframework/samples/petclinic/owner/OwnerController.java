@@ -15,15 +15,13 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -45,10 +43,22 @@ class OwnerController {
 
 	private VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService, VisitRepository visits) {
+	private final ApplicationContext applicationContext;
+
+	public OwnerController(OwnerRepository clinicService, ApplicationContext applicationContext) {
 		this.owners = clinicService;
-		this.visits = visits;
+		//this.visits = visits;
+        this.applicationContext = applicationContext;
 	}
+
+	@GetMapping("/bean")
+    @ResponseBody
+    public String bean(){
+	    return "bean: " + applicationContext.getBean(OwnerRepository.class)+"\n"
+            + "owners: "+ this.owners;
+    }
+
+
 
 	@InitBinder
 	public void setAllowedFields(WebDataBinder dataBinder) {
