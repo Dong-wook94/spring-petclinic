@@ -1,7 +1,13 @@
 # 동욱 스프링 스터디 인강 
+
+인프런 예제로 배우는 스프링(입문) 강의를 들으며 예제 프로젝트에 직접 수정 및 적용해보기
+
+
 ![image](https://user-images.githubusercontent.com/36303777/81691551-f800dc80-9497-11ea-96a2-8eb248a3d4f7.png)
 
 위에 해당하는 변경사항 적용.
+
+추가적으로 Ioc , AOP 강의 부분에 포함된 실습 따라하기 및 적용
 
 -----------
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
